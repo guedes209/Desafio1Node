@@ -5,12 +5,11 @@ const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
-//var users = [];
+var users = [];
 
 app.use(cors());
 app.use(express.json());
 
-const users = [];
 
 function checksExistsUserAccount(request, response, next) {
   const { username } = request.headers;
